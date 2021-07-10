@@ -299,7 +299,7 @@ i {
 		transition-duration: 0.25s;
 	}
 
-	#project-button, #new-project-button, #add-project-popup-input, .add-project-popup-button {
+	#project-button, #new-project-button, #add-project-popup-input, .add-project-popup-button, .add-task-popup-button {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 	}
@@ -319,5 +319,9 @@ i {
 	#tasks-container {
 		margin-left: 0;
 		width: 100%;
+	}
+
+	#add-task-popup {
+		margin: auto;
 	}
 }
