@@ -12,7 +12,7 @@ export default class UI {
 
 		Storage.getProjects().forEach((project) => {
 			UI.createProject(project);
-		})
+		});
 	}
 
 	static loadTasks(project) {
@@ -45,7 +45,7 @@ export default class UI {
 	static createProject(project) {
 		const projectContainer = document.querySelector("#projects");
 		const newButton = document.createElement("button");
-		newButton.classList.add("project-button")
+		newButton.classList.add("project-button");
 		newButton.innerHTML = `
 			<span>${project.name}</span>
 			<i>&times;</i>

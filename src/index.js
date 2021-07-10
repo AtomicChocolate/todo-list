@@ -19,7 +19,7 @@ function projectSelect(button) {
 	const tasks = UI.loadTasks(project);
 	tasks.forEach(task => {
 		addTaskEvents(task);
-	})
+	});
 }
 
 function projectDelete(event, button) {
@@ -39,7 +39,7 @@ function projectDelete(event, button) {
 
 //Add project events for new buttons being added
 function addProjectEvents(button) {
-	button.addEventListener("click", (event) => projectSelect(button));
+	button.addEventListener("click", () => projectSelect(button));
 	button.querySelector("i").addEventListener("click", (event) => projectDelete(event, button));
 }
 
@@ -92,7 +92,7 @@ document.querySelector("#new-project-button").addEventListener("click", newProje
 document.querySelector("#add-project-popup-cancel").addEventListener("click", newProjectCancel);
 document.querySelector("#add-project-popup-add").addEventListener("click", newProjectAdd);
 newProjectName.addEventListener("focus", newProjectInputFocus);
-newProjectName.addEventListener("keyup", newProjectInputKeyup)
+newProjectName.addEventListener("keyup", newProjectInputKeyup);
 
 //! Sidebar Open/Close Button
 
@@ -204,7 +204,7 @@ function taskDelete(event, taskDiv) {
 //Add task events for new divs being added
 function addTaskEvents(taskDiv) {
 	taskDiv.querySelector("input").addEventListener("input", (event) => taskComplete(event, taskDiv, taskDiv.querySelector("input")));
-	taskDiv.querySelector("button").addEventListener("click", (event) => taskClick(taskDiv));
+	taskDiv.querySelector("button").addEventListener("click", () => taskClick(taskDiv));
 	taskDiv.querySelector(".task-name-edit").addEventListener("keyup", (event) => taskInputKeyup(event, taskDiv));
 	taskDiv.querySelector("i").addEventListener("click", (event) => taskDelete(event, taskDiv));
 }

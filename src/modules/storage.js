@@ -3,14 +3,14 @@ let projects = [];
 
 export default class Storage {
 	static saveProjects() {
-		console.log("save")
-		localStorage.setItem('projects', JSON.stringify(projects));
+		console.log("save");
+		localStorage.setItem("projects", JSON.stringify(projects));
 	}
 
 	static getProjects() {
 		//Convert data from local storage
-		console.log("get")
-		projects = JSON.parse(localStorage.getItem('projects'));
+		console.log("get");
+		projects = JSON.parse(localStorage.getItem("projects"));
 
 		if (projects === null) {
 			projects = [];
