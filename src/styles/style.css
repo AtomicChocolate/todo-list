@@ -64,6 +64,8 @@ i {
 	overflow-x: visible;
 	overflow-y: auto;
 	background-color: #333;
+	left: 0%;
+	transition: left 0.25s;
 }
 
 #expand-collapse-sidebar {
@@ -288,15 +290,9 @@ i {
 /* ! Media Queries */
 
 @media (max-width: 768px) {
-
 	#sidebar {
 		width: 80%;
 		position: fixed;
-	}
-
-	#sidebar.close {
-		left: -80%;
-		transition-duration: 0.25s;
 	}
 
 	#project-button, #new-project-button, #add-project-popup-input, .add-project-popup-button, .add-task-popup-button {
