@@ -88,11 +88,9 @@ export default class UI {
 		const button = document.querySelector("#expand-collapse-sidebar");
 
 		if (button.textContent === "◀") {
-			//sidebar.classList.add("close");
 			sidebar.style.left = "-80%";
 			button.textContent = "▶";
 		} else {
-			//sidebar.classList.remove("close");
 			sidebar.style.left = "0%";
 			button.textContent = "◀";
 		}
