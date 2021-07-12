@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <title>Todo List</title>
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-	<title>Todo List</title>
-</head>
-
-<body>
-	<div id="sidebar">
-		<p id="title">Todo List</p>
-		<div id="projects">
-		</div>
-		<button id="new-project-button">New Project</button>
-		<div id="add-project-popup">
-			<input id="add-project-popup-input" type="text">
-			<div id="add-project-popup-buttons">
-				<button class="add-project-popup-button" id="add-project-popup-add">Add</button>
-				<button class="add-project-popup-button" id="add-project-popup-cancel">Cancel</button>
-			</div>
-		</div>
-		<a href="https://github.com/AtomicChocolate/todo-list" id="sidebar-footer">GitHub</a>
-	</div>
-	<button id="expand-collapse-sidebar">◀</button>
-	<div id="main">
-		<textarea id="selected-project" spellcheck=false></textarea>
-		<div id="tasks-container">
-			<p class="tasks-label">Tasks</p>
-			<div id="tasks">
-			</div>
-			<button id="new-task-button">
-				New Task
-			</button>
-			<div id="add-task-popup">
-				<input id="add-task-popup-input" type="text">
-				<div id="add-task-popup-buttons">
-					<button class="add-task-popup-button" id="add-task-popup-add">Add</button>
-					<button class="add-task-popup-button" id="add-task-popup-cancel">Cancel</button>
-				</div>
-			</div>
-			<p class="tasks-label">Completed</p>
-			<div id="completed">
-			</div>
-		</div>
-
-	</div>
-	<script src="main.js"></script>
-</body>
-
+  <body>
+    <div id="sidebar">
+      <p id="title">Todo List</p>
+      <div id="projects"></div>
+      <button id="new-project-button">New Project</button>
+      <div id="add-project-popup">
+        <input id="add-project-popup-input" type="text" />
+        <div id="add-project-popup-buttons">
+          <button class="add-project-popup-button" id="add-project-popup-add">
+            Add
+          </button>
+          <button
+            class="add-project-popup-button"
+            id="add-project-popup-cancel"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      <a href="https://github.com/AtomicChocolate/todo-list" id="sidebar-footer"
+        >GitHub</a
+      >
+    </div>
+    <button id="expand-collapse-sidebar">◀</button>
+    <div id="main">
+      <textarea id="selected-project" spellcheck="false"></textarea>
+      <div id="tasks-container">
+        <p class="tasks-label">Tasks</p>
+        <div id="tasks"></div>
+        <button id="new-task-button">New Task</button>
+        <div id="add-task-popup">
+          <input id="add-task-popup-input" type="text" />
+          <div id="add-task-popup-buttons">
+            <button class="add-task-popup-button" id="add-task-popup-add">
+              Add
+            </button>
+            <button class="add-task-popup-button" id="add-task-popup-cancel">
+              Cancel
+            </button>
+          </div>
+        </div>
+        <p class="tasks-label">Completed</p>
+        <div id="completed"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

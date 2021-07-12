@@ -1,323 +1,331 @@
 body {
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	margin: 0;
-	font-size: 1.6rem;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
 }
 
 button {
-	padding: 0.2rem;
-	font-size: inherit;
-	font-family: inherit;
-	border-style: none;
-	border-radius: 5px;
-	background-color: inherit;
-	color: lightgray;
+  padding: 0.2rem;
+  font-size: inherit;
+  font-family: inherit;
+  border-style: none;
+  border-radius: 5px;
+  background-color: inherit;
+  color: lightgray;
 }
 
 button:hover {
-	background-color: #444;
+  background-color: #444;
 }
 
 input {
-	font-size: inherit;
-	font-family: inherit;
-	border-style: none;
-	outline: none;
-	border-radius: 5px;
-	background-color: inherit;
-	color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border-style: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: inherit;
+  color: inherit;
 }
 
 textarea {
-	font-size: inherit;
-	font-family: inherit;
-	color: inherit;
-	background-color: inherit;
-	border: none;
-	resize: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  resize: none;
 }
 
 i {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .selected {
-	background-color: #444;
+  background-color: #444;
 }
 
 .selected.project-button {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 /* ! Sidebar */
 #sidebar {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 300px;
-	height: 100%;
-	overflow-x: visible;
-	overflow-y: auto;
-	background-color: #333;
-	left: 0%;
-	transition: left 0.25s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  overflow-x: visible;
+  overflow-y: auto;
+  background-color: #333;
+  left: 0%;
+  transition: left 0.25s;
 }
 
 #expand-collapse-sidebar {
-	visibility: hidden;
-	position: fixed;
-	bottom: 0;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 0px 5px 0px 0px;
-	background-color: #444;
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0px 5px 0px 0px;
+  background-color: #444;
 }
 
 #expand-collapse-sidebar:hover {
-	background-color: #555;
+  background-color: #555;
 }
 
 #title {
-	font-size: 2rem;
-	text-align: center;
-	margin: 1rem 0 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0 1rem 0;
 }
 
 .project-button {
-	width: 100%;
-	text-align: left;
-	display: flex;
-	justify-content: space-between;
-	color: white;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  color: white;
 }
 
-.project-button:hover, #new-project-button:hover {
-	background-color: #444;
+.project-button:hover,
+#new-project-button:hover {
+  background-color: #444;
 }
 
 .project-button.active {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 #new-project-button {
-	color: lightgray;
-	text-align: center;
-	background-color: #111;
-	border-radius: 5px;
+  color: lightgray;
+  text-align: center;
+  background-color: #111;
+  border-radius: 5px;
 }
 
 #add-project-popup {
-	padding: 0.5rem 1rem 0;
-	text-align: center;
-	display: none;
+  padding: 0.5rem 1rem 0;
+  text-align: center;
+  display: none;
 }
 
 #add-project-popup-input {
-	width: 100%;
-	margin-bottom: 0.5rem;
-	background-color: #111;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background-color: #111;
 }
 
 #add-project-popup-input::placeholder {
-	color: rgb(255, 65, 65);
+  color: rgb(255, 65, 65);
 }
 
 #add-project-popup-buttons {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .add-project-popup-button {
-	width: 45%;
-	font-size: 0.9rem;
-	font-weight: bold;
+  width: 45%;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 #add-project-popup-add {
-	background-color: rgb(0, 140, 0);
+  background-color: rgb(0, 140, 0);
 }
 
 #add-project-popup-add:hover {
-	background-color: rgb(0, 100, 0);
+  background-color: rgb(0, 100, 0);
 }
 
 #add-project-popup-cancel {
-	background-color: rgb(140, 0, 0);
+  background-color: rgb(140, 0, 0);
 }
 
 #add-project-popup-cancel:hover {
-	background-color: rgb(100, 0, 0);
+  background-color: rgb(100, 0, 0);
 }
 
 #sidebar-footer {
-	width: 100%;
-	background-color: #111;
-	font-size: 1rem;
-	margin-top: auto;
-	text-align: center;
+  width: 100%;
+  background-color: #111;
+  font-size: 1rem;
+  margin-top: auto;
+  text-align: center;
 }
 
 /* ! Main */
 .task-expand {
-	display: none;	
+  display: none;
 }
 
 #main {
-	flex-grow: 1;
-	height: 100%;
-	overflow: hidden;
-	background-color: #222;
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+  background-color: #222;
 }
 
 #selected-project {
-	font-size: 2rem;
-	font-weight: bold;
-	margin-left: 1rem;
-	margin-top: 1rem;
-	padding: 0;
-	width: 100%;
-	height: 2.5rem;
-	font-size: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 2rem;
 }
 
 #tasks-container {
-	width: 50%;
-	min-width: 15rem;
-	margin-left: 1rem;
+  width: 50%;
+  min-width: 15rem;
+  margin-left: 1rem;
 }
 
 .tasks-label {
-	font-weight: bold;
-	margin: 0;
-	margin-top: 1rem;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 1rem;
 }
 
 #task-button {
-	display: flex;
+  display: flex;
 }
 
 #task-button i {
-	margin-left: auto;
-	width: 100%;
-	align-items: center;
+  margin-left: auto;
+  width: 100%;
+  align-items: center;
 }
 
 #new-task-button {
-	background-color: #111;
-	border-radius: 5px;
-	margin-top: 0.5rem;
+  background-color: #111;
+  border-radius: 5px;
+  margin-top: 0.5rem;
 }
 
 #add-task-popup {
-	padding: 0.5rem 1rem 0;
-	width: 16rem;
-	text-align: center;
-	display: none;
+  padding: 0.5rem 1rem 0;
+  width: 16rem;
+  text-align: center;
+  display: none;
 }
 
 #add-task-popup-input {
-	width: 100%;
-	margin-bottom: 0.5rem;
-	background-color: #111;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background-color: #111;
 }
 
 #add-task-popup-input::placeholder {
-	color: rgb(255, 65, 65);
+  color: rgb(255, 65, 65);
 }
 
 #add-task-popup-buttons {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .add-task-popup-button {
-	width: 45%;
-	font-size: 0.9rem;
-	font-weight: bold;
+  width: 45%;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 #add-task-popup-add {
-	background-color: rgb(0, 140, 0);
+  background-color: rgb(0, 140, 0);
 }
 
 #add-task-popup-add:hover {
-	background-color: rgb(0, 100, 0);
+  background-color: rgb(0, 100, 0);
 }
 
 #add-task-popup-cancel {
-	background-color: rgb(140, 0, 0);
+  background-color: rgb(140, 0, 0);
 }
 
 #add-task-popup-cancel:hover {
-	background-color: rgb(100, 0, 0);
+  background-color: rgb(100, 0, 0);
 }
 
 #completed button {
-	color: gray;
-	font-style: italic; 
+  color: gray;
+  font-style: italic;
 }
 
 .task-expand {
-	flex-direction: column;
-	background-color: #111;
-	margin: 0.2rem;
-	padding: 1rem;
+  flex-direction: column;
+  background-color: #111;
+  margin: 0.2rem;
+  padding: 1rem;
 }
 
 .task-expand input {
-	background-color: #222;
-	border-radius: 5px;
+  background-color: #222;
+  border-radius: 5px;
 }
 
 .task-name-edit {
-	width: 100%;
-	margin-bottom: 0.1rem;
+  width: 100%;
+  margin-bottom: 0.1rem;
 }
 
 .task-description-edit {
-	width: 100%;
-	font-size: 1.6rem;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	color: white;
-	resize: vertical;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  resize: vertical;
 }
 
 /* ! Media Queries */
 
 @media (max-width: 768px) {
-	#sidebar {
-		width: 80%;
-		position: fixed;
-	}
+  #sidebar {
+    width: 80%;
+    position: fixed;
+  }
 
-	#project-button, #new-project-button, #add-project-popup-input, .add-project-popup-button, .add-task-popup-button {
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
-	}
+  #project-button,
+  #new-project-button,
+  #add-project-popup-input,
+  .add-project-popup-button,
+  .add-task-popup-button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 
-	#expand-collapse-sidebar {
-		visibility: visible;
-	}
-	
-	#main, textarea {
-		text-align: center;
-	}
+  #expand-collapse-sidebar {
+    visibility: visible;
+  }
 
-	#selected-project {
-		margin-left: 0;
-	}
+  #main,
+  textarea {
+    text-align: center;
+  }
 
-	#tasks-container {
-		margin-left: 0;
-		width: 100%;
-	}
+  #selected-project {
+    margin-left: 0;
+  }
 
-	#add-task-popup {
-		margin: auto;
-	}
+  #tasks-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #add-task-popup {
+    margin: auto;
+  }
 }
